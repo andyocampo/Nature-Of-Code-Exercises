@@ -21,7 +21,7 @@ public class Walker : MonoBehaviour
 
     public void Step()
     {
-        int choice = Random.Range(0, 4);
+        int choice = Random.Range(0, 6);
 
         switch(choice)
         {
@@ -29,10 +29,10 @@ public class Walker : MonoBehaviour
                 x++;
                 break;
             case 1:
-                x--;
+                x++;
                 break;
             case 2:
-                y--;
+                x--;
                 break;
             case 3:
                 y++;
@@ -40,6 +40,13 @@ public class Walker : MonoBehaviour
             case 4:
                 y--;
                 break;
+            case 5:
+                x++;
+                break;
+            case 6:
+                y--;
+                break;
+
         }
         walkerObject.transform.position = new Vector3(x, y, 0);
     }
